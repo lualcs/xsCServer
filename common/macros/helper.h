@@ -4,6 +4,11 @@
     auth:Carol Luo
 */
 
+//通用
+#define change(s,a,b) auto c=s[a];s[a]=s[b];s[b]=s[c]; //矢量交换
+#define lastii(s) (a.size()-1)                         //矢量末尾
+
+//棋牌
 #define getCard(COLOR,VALUE) ((COLOR<<4)|VALUE)    //合成牌
 #define getColor(CARD)       ((CARD&0xF0)>>4)      //取花色
 #define getValue(CARD)       (CARD&0x0F)           //取牌值
