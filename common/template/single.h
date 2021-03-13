@@ -7,20 +7,17 @@
 template <class T>
 class single {
     private:
-    static T* pInstall = nullptr;
+    static T* install = nullptr;
     
     public:
-    static T* getInstall()
-    {
-        if(nullptr == pInstall)
-        {
-            pInstall = new T();
+    static T* getInstall(){
+        if(nullptr == install){
+            install = new T();
         }
-        return pInstall;
+        return install;
     }
 
-    T* operator *()
-    {
+    T* operator *(){
         return getInstall();
     }
     
