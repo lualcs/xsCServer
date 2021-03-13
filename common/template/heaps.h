@@ -77,7 +77,7 @@ public:
 		if (pos >= m_list.size())
 			return true;
 
-		T child = m_list[pos];
+		auto child = m_list[pos];
 
 		while (pos > 0)
 		{
