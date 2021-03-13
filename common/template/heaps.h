@@ -21,43 +21,35 @@ private:
 	function    m_comp;                 
 public:
     //构造
-	heaps(function comp):
-    m_comp(comp)
-    { 
+	heaps(function comp):m_comp(comp){ 
     }
     //析构
-	~heaps()
-    {
+	~heaps(){
     }
 
 	//[]重载
-	element operator [](int index)
-    { 
+	element operator [](int index){ 
         return m_list[index]; 
     }
 
     //->重载
-	elements* operator ->()
-    {
+	elements* operator ->(){
          return &m_list; 
     }
 
     //添加
-	void append(element element)
-	{
+	void append(element element){
 		m_list.push_back(element);
 		upward(lastii(m_list));
 	}
 
     //弹出
-	element pop()
-	{
+	element pop(){
 		return erase(0);
 	}
 
     //删除
-	element erase(int index)
-	{   
+	element erase(int index){   
         change(m_list,pos,lastii(m_list));
         auto eleme = m_list.pop_back()
 		adjust(pos);
@@ -65,15 +57,13 @@ public:
 	}
 
     //调整
-	void adjust(int pos)
-	{
+	void adjust(int pos){
 		upward(pos);
 		downward(pos);
 	}
 
     //向上
-	bool upward(int pos)
-	{
+	bool upward(int pos){
 		if (pos >= m_list.size())
 			return true;
 
@@ -96,8 +86,7 @@ public:
 	}
 
     //向下
-	bool downward(int pos)
-	{
+	bool downward(int pos){
 		if (pos >= m_list.size())
 			return true;
 

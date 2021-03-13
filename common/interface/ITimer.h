@@ -1,5 +1,5 @@
 /*
-    file:timer.h
+    file:ITimer.h
     desc:定时器抽象接口 
     auth:Carol Luo
 */
