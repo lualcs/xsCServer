@@ -9,6 +9,8 @@ class ITable {
     public:
     //获取桌子ID
     virtual int getTableID();
+    //获取战绩ID
+    virtual int getHistoryID();
     //获取对局ID
     virtual int getCombatID();
     //获取位置数量
